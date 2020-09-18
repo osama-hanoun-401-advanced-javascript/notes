@@ -7,13 +7,13 @@ jest.spyOn(global.console, 'log');
 
 // describe the module I am testing
 describe('Note Module', ()=> {
-    // test case
-    it('render() cosloes the object', ()=> {
-        const note = new Note();
-        note.execute({action:'add',payload:'This is a note'});
-        note.render();
-        expect(console.log).toHaveBeenCalled();
-    });
+  // test case
+  it('render() consoles the object', ()=> {
+    const note = new Note();
+    note.execute({action:'add',payload:'This is a note'});
+    console.log('note.list()>>>>>>',note.list());
+    expect(console.log).toHaveBeenCalled();
+  });
 
 });
 
